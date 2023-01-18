@@ -22,7 +22,7 @@ mongoose.connect(
     }
   }
 );
-// console.log(__dirname)
+
 // Middlewares
 app.use("/images",express.static(path.join(__dirname,"public/images")))
 
