@@ -7,6 +7,8 @@ const helmet = require("helmet");
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/post");
+const conversationRoute= require("./routes/conversations")
+const messageRoute= require("./routes/messages")
 const multer = require("multer");
 const path = require("path");
 dotenv.config();
@@ -52,6 +54,8 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/post", postRoute);
+app.use("/api/conversations",conversationRoute)
+app.use("/api/messages",messageRoute)
 
 app.listen(8800, () => {
   console.log("backend server is running");
