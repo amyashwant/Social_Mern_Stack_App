@@ -63,7 +63,7 @@ router.put("/:id/like", async (req, res) => {
   }
 });
 
-//get the post
+
 
 router.get("/:id", async (req, res) => {
   try {
